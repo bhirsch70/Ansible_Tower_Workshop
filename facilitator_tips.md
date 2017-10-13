@@ -28,12 +28,12 @@ This guide is designed to help an facilitator create all of the tools/access req
 ## Accessing student documentation and slides
 
    ### Student Guide and Presentation Slides
-   * A general student guide and instructor slides are already hosted at http://ansible-workshop.redhatgov.io . (NOTE:  This guide is evolving and newer workshops can be previewed at http:) //ansible.redhatgov.io . This version is currently being integrated with the Lightbulb project)
+   * A general student guide and instructor slides are already hosted at http://ansible-workshop.redhatgov.io . (NOTE:  This guide is evolving and newer workshops can be previewed at http://ansible.redhatgov.io . This new version is currently being integrated with the Lightbulb project)
    * Here you will find complete student instructions for each exercise as well as the presentation decks under the __Resources__ drop down.
-   * During the workshop, it is recommended that you have a second device or printed copy or both.  Previous workshops have demonstrated that unless you've memorized all of it, you'll likely need to refer to the guide, but your laptop will most likely be projecting the slide decks.  Some students will fall behind and you'll need to refer back to other exercises/slides without having to change the projection for the entire class.
+   * During the workshop, it is recommended that you have a second device, printed copy or both.  Previous workshops have demonstrated that unless you've memorized all of it, you'll likely need to refer to the guide, but your laptop will be projecting the slide decks.  Some students will fall behind and you'll need to refer back to other exercises/slides without having to change the projection for the entire class.
 
-   ### Student Lab information
-   * NOTE:  This is only applicable if you chose to disable email during provisioning.
+   ### Hosting Student Lab information
+   _NOTE:  This is only applicable if you chose to disable email during provisioning._
    * After your lab build, you will find a file called `instructors_inventory.txt` located in the `lightbulb/tools/aws_lab_setup/` directory.  
    * Use [github gist](https://gist.github.com/) to upload that file. (Or post it to a site of your choosing as long as the students can see the info the day-of)
    * Use some type of of URL shortener (like tinyurl or goo.gl) to create a more consumable URL for the inventory file.
