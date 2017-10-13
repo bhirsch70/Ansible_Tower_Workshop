@@ -12,7 +12,7 @@ This guide is designed to help an facilitator create all of the tools/access req
    1. Follow [lightbulb AWS training provisioner guide](https://github.com/ansible/lightbulb/tree/master/tools/aws_lab_setup).
    2. A couple of modifications to these instructions are sometimes made in the field.
     - Disabling `email` tasks in the provisioner.  Although the `email` tasks can be useful if you want lab information to be sent directly to the student, instructors have found this can lead to students attempting pre-work which can cause issues during the workshop.  To accomplish this, simply add `email: no` to the extra_vars.yml file you will use during the playbook run.
-    - Use generic user info for your students in `users.yml`.  This makes it easier to create XX accounts without knowing exactly who may be in the workshop.  It is common for to have several walk-ins the day of the workshop which will cause distractions and last minute lab environment builds.  This method eliminates those issues by enabling the instructor to pre-build several extra lab environments and assigning them to last minute students.  You're `users.yml` should look similar to this.
+    - Use generic user info for your students in `users.yml`.  This makes it easier to create XX accounts without knowing exactly who may be in the workshop.  It is common to have several walk-ins the day of the workshop which will cause distractions and last minute lab environment builds.  This method eliminates those issues by enabling the instructor to pre-build several extra lab environments and assigning them to last minute students.  You're `users.yml` should look similar to this.
    ```
    users:
      - name: Student01
@@ -33,6 +33,7 @@ This guide is designed to help an facilitator create all of the tools/access req
    * During the workshop, it is recommended that you have a second device or printed copy or both.  Previous workshops have demonstrated that unless you've memorized all of it, you'll likely need to refer to the guide, but your laptop will most likely be projecting the slide decks.  Some students will fall behind and you'll need to refer back to other exercises/slides without having to change the projection for the entire class.
 
    ### Student Lab information
+   * NOTE:  This is only applicable if you chose to disable email during provisioning.
    * After your lab build, you will find a file called `instructors_inventory.txt` located in the `lightbulb/tools/aws_lab_setup/` directory.  
    * Use [github gist](https://gist.github.com/) to upload that file. (Or post it to a site of your choosing as long as the students can see the info the day-of)
    * Use some type of of URL shortener (like tinyurl or goo.gl) to create a more consumable URL for the inventory file.
