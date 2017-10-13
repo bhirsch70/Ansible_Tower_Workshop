@@ -24,11 +24,7 @@ users:
     username: student02
     email: facilitator@redhat.com
 ```
-7. At this point, you should be ready to launch `provision_lab.yml`.  Double check your extra_vars.yml file to be sure you've disabled email
-```...
-email: no
-```
-8. Launch the lab build and monitor carefully.
+7. Launch the lab build and monitor carefully.
 `ansible-playbook provision_lab.yml -e @extra_vars.yml -e users.yml`
 
 ## Accessing student documentation and slides
