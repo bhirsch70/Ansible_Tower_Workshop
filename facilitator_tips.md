@@ -1,7 +1,7 @@
-Ansible Workshop Instructor's Guide - RedHatGov AWS
+Ansible Workshop Facilitator's Tips
 =========================================
 
-In addition to having some core Ansible and Ansible Tower skills, hosting a successful Ansible workshop will require a number of prerequisites be met to build and host the workshop infrastructure and student guides, and instructor decks. This guide is designed to help an Instructor create all of the tools/access required to host a workshop.  These instructions can be broken down into several categories.
+This guide is designed to help an facilitator create all of the tools/access required to host a workshop and offer up some tips to ensure the workshop runs smoothly.  These instructions can be broken down into several categories.
 
 * Building AWS instances for students
 * Accessing student documentation and instructor decks
@@ -17,21 +17,15 @@ In addition to having some core Ansible and Ansible Tower skills, hosting a succ
 6. We also recommend that you use generic user info for your students in `users.yml`.  This makes it easier to create XX accounts without knowing exactly who may be in the workshop.  It is common for to have several walk-ins the day of the workshop which will cause distractions and last minute lab environment builds.  This method eliminates those issues by enabling the instructor to pre-build several extra lab environments and assigning them to last minute students.  You're `users.yml` should look similar to this.
 ```
 users:
-  - name: Student1
-    username: student1
-    email: bhirsch@redhat.com
-  - name: Student2
-    username: student2
-    email: bhirsch@redhat.com
+  - name: Student01
+    username: student01
+    email: facilitator@redhat.com
+  - name: Student02
+    username: student02
+    email: facilitator@redhat.com
 ```
-7. At this point, you should be ready to launch `provision_lab.yml`.  Double check your extra_vars.yml file... it should look similar to this.
-```
-ec2_key_name: ansible-bh  # SSH key in AWS to put in all the instances
-ec2_region: us-east-1     # region where the nodes will live
-ec2_vpc_id: vpc-2a994a4c
-ec2_vpc_subnet_id: subnet-b70447fe
-ec2_name_prefix: BH-WS  # name prefix for all the VMs
-admin_password: abc123       # set this to something better if you'd like
+7. At this point, you should be ready to launch `provision_lab.yml`.  Double check your extra_vars.yml file to be sure you've disabled email
+```...
 email: no
 ```
 8. Launch the lab build and monitor carefully.
@@ -40,9 +34,9 @@ email: no
 ## Accessing student documentation and slides
 
 ### Student Guide and Presentation Slides
-* A general student guide and instructor slides are already hosted at http://ansible-workshop.redhatgov.io . (NOTE:  This guide is evolving and newer workshops can be previewed at http:) //ansible.redhatgov.io and this version is currently being integrated with the Lightbulb project)
+* A general student guide and instructor slides are already hosted at http://ansible-workshop.redhatgov.io . (NOTE:  This guide is evolving and newer workshops can be previewed at http:) //ansible.redhatgov.io . This version is currently being integrated with the Lightbulb project)
 * Here you will find complete student instructions for each exercise as well as the presentation decks under the __Resources__ drop down.
-* During the workshop, it is recommended that you have a second device or printed copy of both.  Previous workshops have demonstrated that unless you've memorized all of it, you'll likely need to refer to these, but your laptop will most likely be projecting the slide decks.  Some students will fall behind and you'll need to refer back to other exercises/slides without having to change the projection for the entire class.
+* During the workshop, it is recommended that you have a second device or printed copy or both.  Previous workshops have demonstrated that unless you've memorized all of it, you'll likely need to refer to the guide, but your laptop will most likely be projecting the slide decks.  Some students will fall behind and you'll need to refer back to other exercises/slides without having to change the projection for the entire class.
 
 ### Student Lab information
 * After your lab build, you will find a file called `instructors_inventory.txt` located in the `lightbulb/tools/aws_lab_setup/` directory.  
