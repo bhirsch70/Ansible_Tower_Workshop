@@ -1,14 +1,14 @@
-nsible Workshop Facilitator's Tips - RedHatGov AWS
+Ansible Workshop Facilitator's Tips - RedHatGov AWS
 =========================================
 
-This guide is designed to help an facilitator create all of the tools/access required to host a workshop and offer up some tips to ensure the workshop runs smoothly.  These instructions can be broken down into several categories.
+This guide is designed to help an facilitator create all of the tools/access required to host a hands-on workshop and offer up some tips to ensure the workshop runs smoothly.  These instructions can be broken down into several categories.
 
-* Access to an AWS account, keys, and some working knowledge of EC2, S3, and Route53
-* Building AWS instances for students
+* Access to an AWS account, keys, and some working knowledge of EC2
+* Configuring the workshop lab environment
 * Accessing student documentation and instructor decks
-* Day-Of logistics
+* Onsite logistics
 
-## Access to  AWS account
+## Access to AWS account
 
 1. Gain access to the [redhatgov.io](https://us-east-1.signin.aws.amazon.com) Amazon AWS account -  Shawn Wells is the owner/maintainer of this account.
 2. An existing administrator (Shawn or other admin) will need to add you as a user to IAM with the following:
@@ -20,7 +20,7 @@ This guide is designed to help an facilitator create all of the tools/access req
 4. Navigate to the EC2 service
    - Generate your own __keypair__ and place the `<keypair>.pem` file into your `~username/.ssh/` directory .This is the ssh key that will enable you to perform post-provisioning ansible tasks on EC2 instances from your laptop to the redhatgov.io AWS account, as well as login to the instances you've created.
 
-   ## Building AWS instances for students
+## Configuring the workshop lab environment
 
    1. If you don't already have it, [get yourself setup with git on your laptop](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
    2. git clone [lightbulb](https://github.com/ansible/lightbulb)
@@ -40,7 +40,7 @@ This guide is designed to help an facilitator create all of the tools/access req
    7. Launch the lab build and monitor carefully.
    `ansible-playbook provision_lab.yml -e @extra_vars.yml -e users.yml`
 
-   ## Accessing student documentation and slides
+## Accessing student documentation and slides
 
    ### Student Guide and Presentation Slides
    * A general student guide and instructor slides are already hosted at http://ansible-workshop.redhatgov.io . (NOTE:  This guide is evolving and newer workshops can be previewed at http:) //ansible.redhatgov.io . This version is currently being integrated with the Lightbulb project)
@@ -52,7 +52,7 @@ This guide is designed to help an facilitator create all of the tools/access req
    * Use [github gist](https://gist.github.com/) to upload that file. (Or post it to a site of your choosing as long as the students can see the info the day-of)
    * Use some type of of URL shortener (like tinyurl or goo.gl) to create a more consumable URL for the inventory file.
 
-   ## Day-Of logistics
+## Onsite logistics
    * Arrive at least 45 minutes early to the workshop location to ensure the setup is correct and solve common problems.
      - Projector not working, only VGA, only HDMI, no adapters, mic not working, etc.
      - No work space for the facilitator(s), i.e. no podium, no table for your laptop, no chairs

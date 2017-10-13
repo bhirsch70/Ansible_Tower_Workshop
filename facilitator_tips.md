@@ -1,13 +1,13 @@
 Ansible Workshop Facilitator's Tips
 =========================================
 
-This guide is designed to help an facilitator create all of the tools/access required to host a workshop and offer up some tips to ensure the workshop runs smoothly.  These instructions can be broken down into several categories.
+This guide is designed to help an facilitator create all of the tools/access required to host a hands-on workshop and offer up some tips to ensure the workshop runs smoothly.  These instructions can be broken down into several categories.
 
-* Building AWS instances for students
+* Configuring the workshop lab environment
 * Accessing student documentation and instructor decks
-* Day-Of logistics
+* Onsite logistics
 
-## Building AWS instances for students
+## Configuring the workshop lab environment
 
 1. If you don't already have it, [get yourself setup with git on your laptop](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 2. git clone [lightbulb](https://github.com/ansible/lightbulb)
@@ -39,7 +39,7 @@ users:
 * Use [github gist](https://gist.github.com/) to upload that file. (Or post it to a site of your choosing as long as the students can see the info the day-of)
 * Use some type of of URL shortener (like tinyurl or goo.gl) to create a more consumable URL for the inventory file.
 
-## Day-Of logistics
+## Onsite logistics
 * Arrive at least 45 minutes early to the workshop location to ensure the setup is correct and solve common problems.
   - Projector not working, only VGA, only HDMI, no adapters, mic not working, etc.
   - No work space for the facilitator(s), i.e. no podium, no table for your laptop, no chairs
